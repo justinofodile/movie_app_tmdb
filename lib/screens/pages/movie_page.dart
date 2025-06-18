@@ -63,7 +63,7 @@ class _MoviePageState extends State<MoviePage> {
                                 child: Image.network(
                                   'https://image.tmdb.org/t/p/w200${movie['backdrop_path']}',
                                   width: double.infinity,
-                                  height: 130,
+                                  height: 160,
                                   fit: BoxFit.cover,
                                 ),
                               ),

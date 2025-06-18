@@ -2,11 +2,6 @@ import 'package:dio/dio.dart';
 
 class MovieService {
   Dio dio = Dio();
-  final header = {
-    "Authorization":
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ODVkNTdiM2ZmNDYwMjE3N2ZhMzkzYWYzMjQ0OWUyMSIsIm5iZiI6MTc0OTg5MzQ2OS4zNzQsInN1YiI6IjY4NGQ0MTVkNDNiNTAxMzA0NzVjNzdmOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SK8LDX7KCpLZy1Ic0yuSZottHFenn0x_aNXLR1LFw0g",
-    "accept": "application/json"
-  };
 
   Future<List<dynamic>> popularMovies() async {
     Response response = await dio.get(
