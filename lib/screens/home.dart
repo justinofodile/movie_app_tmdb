@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_app/screens/pages/home_page.dart';
+import 'package:the_app/screens/pages/movie_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: const [
           Center(child: HomePage()),
           Center(child: Text('Page View 2')),
-          Center(child: Text('Page View 3')),
+          Center(child: MoviePage()),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
