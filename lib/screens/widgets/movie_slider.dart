@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:the_app/screens/pages/movie_details.dart';
 
 class MovieSlider extends StatelessWidget {
   final List<dynamic> topRatedMovies;
@@ -15,7 +16,14 @@ class MovieSlider extends StatelessWidget {
           children: [
             Expanded(
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MovieDetails(movie: movies),
+                    ),
+                  );
+                },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.network(

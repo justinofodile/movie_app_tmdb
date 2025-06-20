@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_app/screens/pages/movie_details.dart';
 
 class HorizontalViewScroll extends StatelessWidget {
   final List<dynamic> movies;
@@ -13,7 +14,14 @@ class HorizontalViewScroll extends StatelessWidget {
           ...List.generate(movies.length, (index) {
             final movie = movies[index];
             return GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MovieDetails(movie: movie),
+                  ),
+                );
+              },
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 8),
                 child: Column(
@@ -33,8 +41,9 @@ class HorizontalViewScroll extends StatelessWidget {
                     SizedBox(
                       child: Text(
                         movie['title'],
-                        textAlign: TextAlign.center,
+                        maxLines: 1,
                         overflow: TextOverflow.ellipsis,
+                        // style: const TextStyle(fontSize: 18),
                       ),
                     )
                   ],
